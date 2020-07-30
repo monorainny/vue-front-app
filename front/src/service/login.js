@@ -2,7 +2,6 @@ import axios from './axios';
 import VueCookies from 'vue-cookies';
 
 export async function testLogin(){
-    
     try{
         const token = await axios.post('/testLogin');
         VueCookies.set('token', token.data.data.token, '60s' );
